@@ -1,0 +1,88 @@
+/* 默认样式，初始状态下隐藏滚动条，保留背景模糊效果 */
+.hotlist-container {
+    display: inline-block;
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    vertical-align: top;
+    box-sizing: border-box;
+    overflow-y: hidden; /* 初始状态下隐藏垂直滚动条 */
+    backdrop-filter: blur(10px); /* 保留背景模糊效果 */
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 40px;
+    max-height: 350px;
+    transition: max-height 0.5s; /* 动画过渡效果 */
+    border-radius: 20px; /* 添加圆角 */
+  }
+  
+  /* 鼠标悬停时显示滚动条 */
+  .hotlist-container:hover {
+    overflow-y: auto; /* 鼠标悬停时显示垂直滚动条 */
+    max-height: 450px; /* 鼠标悬停时增加最大高度，显示更多内容 */
+  }
+  
+  /* 在小屏幕上，每行显示一个容器 */
+  @media (max-width: 600px) {
+    .hotlist-container {
+      width: calc(100% - 20px); /* 每个容器宽度为整行宽度，并考虑间距 */
+      max-height: none; /* 移除最大高度限制 */
+    }
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+  }
+
+  #datetime {
+    text-align: center;  /* 文字居中 */
+    padding: 10px;
+    background-color:  rgba(255, 255, 255, 0.5);
+    font-size: 24px;
+  }
+
+.hotlist-container ul {
+    list-style: decimal; /* 使用序号作为列表标志 */
+    padding-left: 20px;  /* 添加一定的左边距，让序号与文本对齐 */
+  }
+
+
+  /* 添加内联CSS样式 */
+  .header-container {
+    position: relative; /* 设置父容器为相对定位 */
+    width: 100%; /* 设置父容器宽度 */
+    height: 200px; /* 设置父容器高度 */
+  }
+  .header-container img {
+    position: absolute; /* 设置图片为绝对定位 */
+    top: 0px; /* 图片距离顶部的距离 */
+    left: 15px; /* 图片距离左侧的距离 */
+    width: 50px; /* 设置图片宽度 */
+    height: 50px; /* 设置图片高度 */
+    object-fit: cover; /* 图片适应容器大小 */
+  }
+  h1 {
+    position: absolute; /* 设置标题为绝对定位 */
+    top: 0px; /* 标题距离顶部的距离 */
+    left: 80px; /* 标题距离左侧的距离 */
+    font-size: 30px; /* 设置标题字体大小*/
+    object-fit: cover; /* 标题适应容器大小 */
+    margin: 0; /* 重置标题的内外边距 */
+    padding: 5px; /* 重置标题的内外边距 */
+  }
+
+  .bottomBar {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background-color: rgba(2, 11, 12, 0.566);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* 设置为相对定位 */
+    top: 20px; /* 调整底部栏与 hotlist-container 之间的垂直距离 */
+  }
+  
