@@ -62,3 +62,17 @@
     top: 20px; /* 调整底部栏与 hotlist-container 之间的垂直距离 */
   }
   
+  .header-with-image {
+    display: flex;
+    align-items: center;
+  }
+  .header-image {
+    margin-right: 10px; /* 调整图像与标题之间的间距 */
+  }
+h2 {
+    text-align: center; /* 将H1标题内容居中 */
+    background-color: rgba(255, 255, 255, 0.5); /* 使用rgba来设置背景颜色和透明度 */
+    backdrop-filter: blur(10px); /* 使用backdrop-filter添加毛玻璃效果，数值代表模糊程度 */
+    -webkit-backdrop-filter: blur(10px); /* 为了兼容性，同样为其添加Webkit前缀 */
+    padding: 10px; /* 增加内边距 */
+  }
