@@ -28,7 +28,7 @@ function fetchAndRenderData() {
         console.error('ERROR:404', error);
       });
   }
-  
+
   // 初次加载页面时执行并启动定时器，每半小时更新一次热搜数据
   fetchAndRenderData();  // 确保页面首次加载时就获取并显示热搜数据
   setInterval(fetchAndRenderData, 30 * 60 * 1000);  // 30分钟间隔
@@ -62,3 +62,17 @@ const images = [
 
   // 初次加载页面时显示时间
   displayTime();
+
+
+// 显示弹窗
+window.onload = function() {
+  var modal = document.createElement('div');
+  modal.classList.add('modal');
+  modal.innerHTML = '<p>温馨提示:本站热榜内容不代表作者本人最终观点,请理性对待这些热榜信息!</p>';
+  document.body.appendChild(modal);
+  modal.style.display = 'block';
+  setTimeout(function() {
+    modal.style.display = 'none';
+  }, 3500); // 3.5秒后自动隐藏
+};
+
