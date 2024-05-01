@@ -24,7 +24,7 @@
   @media (max-width: 600px) {
     .hotlist-container {
       width: calc(100% - 20px); /* 每个容器宽度为整行宽度，并考虑间距 */
-      max-height: none; /* 移除最大高度限制 */
+/*      max-height: none; /* 移除最大高度限制 */
     }
   }
   body {
