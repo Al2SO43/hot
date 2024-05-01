@@ -76,6 +76,7 @@ h2 {
     -webkit-backdrop-filter: blur(10px); /* 为了兼容性，同样为其添加Webkit前缀 */
     padding: 10px; /* 增加内边距 */
     font-size: 24px;
+    border-radius: 20px; /* 增加圆角 */
   }
 
   .modal {
