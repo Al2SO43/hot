@@ -14,7 +14,7 @@ function fetchAndRenderData() {
               <p>更新时间: ${item.update_time}</p>
               <ul>
                 ${item.data.map(entry => `
-                  <li><a href="${entry.url}" target="_blank">${entry.title}</a> <br>本条热度(或更新时间)：${entry.hot} </li>
+                  <li><a href="${entry.url}" target="_blank">${entry.title}</a> <br>本条热度或更新时间:${entry.hot} </li>
                 `).join('')}
               </ul>
             `;
