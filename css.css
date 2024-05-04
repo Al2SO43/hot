@@ -17,7 +17,7 @@
   /* 鼠标悬停时显示滚动条 */
   .hotlist-container:hover {
     overflow-y: auto; /* 鼠标悬停时显示垂直滚动条 */
-    max-height: 500px; /* 鼠标悬停时增加最大高度，显示更多内容 */
+    max-height: 600px; /* 鼠标悬停时增加最大高度，显示更多内容 */
   }
   
   /* 在小屏幕上，每行显示一个容器 */
