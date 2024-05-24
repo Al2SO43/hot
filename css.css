@@ -1,30 +1,27 @@
-/* 默认样式，初始状态下隐藏滚动条，保留背景模糊效果 */
 .hotlist-container {
     display: inline-block;
     width: calc(33.33% - 20px);
     margin: 10px;
     vertical-align: top;
     box-sizing: border-box;
-    overflow-y: hidden; /* 初始状态下隐藏垂直滚动条 */
-    backdrop-filter: blur(10px); /* 保留背景模糊效果 */
+    overflow-y: hidden; 
+    backdrop-filter: blur(10px); 
     background-color: rgba(255, 255, 255, 0.5);
     padding: 40px;
     max-height: 350px;
-    transition: max-height 0.5s; /* 动画过渡效果 */
-    border-radius: 20px; /* 添加圆角 */
+    transition: max-height 0.5s; 
+    border-radius: 20px;
   }
   
-  /* 鼠标悬停时显示滚动条 */
   .hotlist-container:hover {
-    overflow-y: auto; /* 鼠标悬停时显示垂直滚动条 */
-    max-height: 600px; /* 鼠标悬停时增加最大高度，显示更多内容 */
+    overflow-y: auto; 
+    max-height: 600px; 
   }
   
   /* 在小屏幕上，每行显示一个容器 */
   @media (max-width: 600px) {
     .hotlist-container {
       width: calc(100% - 20px); /* 每个容器宽度为整行宽度，并考虑间距 */
-/*      max-height: none; /* 移除最大高度限制 */
     }
   }
   body {
@@ -36,15 +33,14 @@
   }
 
   #datetime {
-    text-align: center;  /* 文字居中 */
+    text-align: center;  
     padding: 10px;
-/*    background-color:  rgba(255, 255, 255, 0.5);*/
     font-size: 24px;
   }
 
 .hotlist-container ul {
-    list-style: decimal; /* 使用序号作为列表标志 */
-    padding-left: 20px;  /* 添加一定的左边距，让序号与文本对齐 */
+    list-style: decimal; 
+    padding-left: 20px; 
   }
 
 
@@ -58,8 +54,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative; /* 设置为相对定位 */
-    top: 20px; /* 调整底部栏与 hotlist-container 之间的垂直距离 */
+    position: relative; 
+    top: 20px; 
   }
   
   .header-with-image {
@@ -67,16 +63,16 @@
     align-items: center;
   }
   .header-image {
-    margin-right: 10px; /* 调整图像与标题之间的间距 */
+    margin-right: 10px; 
   }
 h2 {
-    text-align: center; /* 将H1标题内容居中 */
-    background-color: rgba(255, 255, 255, 0.5); /* 使用rgba来设置背景颜色和透明度 */
-    backdrop-filter: blur(10px); /* 使用backdrop-filter添加毛玻璃效果，数值代表模糊程度 */
-    -webkit-backdrop-filter: blur(10px); /* 为了兼容性，同样为其添加Webkit前缀 */
-    padding: 10px; /* 增加内边距 */
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5); 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
+    padding: 10px; 
     font-size: 24px;
-    border-radius: 20px; /* 增加圆角 */
+    border-radius: 20px; 
   }
 
   .modal {

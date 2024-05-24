@@ -29,7 +29,6 @@ function fetchAndRenderData() {
       });
   }
 
-  // 初次加载页面时执行并启动定时器，每半小时更新一次热搜数据
   fetchAndRenderData();  // 确保页面首次加载时就获取并显示热搜数据
   setInterval(fetchAndRenderData, 30 * 60 * 1000);  // 30分钟间隔
   
@@ -60,7 +59,6 @@ const images = [
   // 每秒更新时间
   setInterval(displayTime, 1000);
 
-  // 初次加载页面时显示时间
   displayTime();
 
 
