@@ -21,7 +21,7 @@
   /* 在小屏幕上，每行显示一个容器 */
   @media (max-width: 600px) {
     .hotlist-container {
-      width: calc(100% - 20px); /* 每个容器宽度为整行宽度，并考虑间距 */
+      width: calc(100% - 20px); 
     }
   }
   body {
@@ -35,7 +35,7 @@
   #datetime {
     text-align: center;  
     padding: 10px;
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 
 .hotlist-container ul {
@@ -71,7 +71,7 @@ h2 {
     backdrop-filter: blur(10px); 
     -webkit-backdrop-filter: blur(10px); 
     padding: 10px; 
-    font-size: 24px;
+    font-size: 1.5rem;
     border-radius: 20px; 
   }
 
