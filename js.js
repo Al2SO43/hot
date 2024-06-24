@@ -61,16 +61,3 @@ document.body.style.backgroundAttachment = 'fixed';
   setInterval(displayTime, 1000);
 
   displayTime();
-
-
-// 显示弹窗
-window.onload = function() {
-  var modal = document.createElement('div');
-  modal.classList.add('modal');
-  modal.innerHTML = '<p>温馨提示:本站热榜内容不代表作者本人最终观点,请理性对待这些热榜信息!</p>';
-  document.body.appendChild(modal);
-  modal.style.display = 'block';
-  setTimeout(function() {
-    modal.style.display = 'none';
-  }, 3500); 
-};
