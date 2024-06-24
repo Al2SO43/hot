@@ -18,10 +18,10 @@
     max-height: 600px; 
   }
   
-  /* 在小屏幕上，每行显示一个容器 */
-  @media (max-width: 600px) {
+ 
+  @media (max-width: 800px) {
     .hotlist-container {
-      width: calc(100% - 20px); /* 每个容器宽度为整行宽度，并考虑间距 */
+      width: calc(100% - 20px); 
     }
   }
   body {
