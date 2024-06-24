@@ -51,7 +51,6 @@ document.body.style.backgroundSize = 'cover';
 document.body.style.backgroundRepeat = 'no-repeat'; 
 document.body.style.backgroundPosition = 'center'; 
 document.body.style.backgroundAttachment = 'fixed'; 
-
   function displayTime() {
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false, timeZone: 'Asia/Shanghai' };
     const beijingTime = new Date().toLocaleString('zh-CN', options);
@@ -73,6 +72,5 @@ window.onload = function() {
   modal.style.display = 'block';
   setTimeout(function() {
     modal.style.display = 'none';
-  }, 3500); // 3.5秒后自动隐藏
+  }, 3500); 
 };
-
