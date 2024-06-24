@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 .hotlist-container {
     display: inline-block;
     width: calc(33.33% - 20px);
