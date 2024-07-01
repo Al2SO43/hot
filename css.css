@@ -80,11 +80,11 @@ h2 {
 
 ::-webkit-scrollbar-thumb {
   border-radius: 4px;
-  background-color:#1ab2bdfc;
+  background-color:#17cedbb6;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #09776795;
+  background-color: #08462fcf;
 }
 @keyframes animateBackground {
     0% {
