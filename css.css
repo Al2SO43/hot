@@ -3,22 +3,24 @@
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, #afafaf, #6b6b6bb1);
   background-size: cover;
   background-position: center;
+  background: linear-gradient(to right, #8FBC8F, #9ACD32);
+  animation: animateBackground 120s infinite; 
 }
 
 .hotlist-container {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 40px;
+  backdrop-filter: blur(5px); 
   display: inline-block;
   width: calc(33.33% - 20px);
   margin: 10px;
   vertical-align: top;
   box-sizing: border-box;
   overflow-y: hidden;
-  background-color: #ffffff;
-  padding: 40px;
-  height: 350px;
-  border: 1px solid #cccccc;
+  height: 500px;
+  border: 1px solid #3d3d3d;
   border-radius: 10px;
 }
 .hotlist-container a {
@@ -51,7 +53,7 @@ body {
   left: 0;
   right: 0;
   height: 50px;
-  background-color: #7f7f7f; 
+  background-color: rgba(63, 63, 63, 0); 
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -81,4 +83,129 @@ h2 {
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: #484848;
+}
+@keyframes animateBackground {
+  0% {
+      background: linear-gradient(to bottom, #8FBC8F, #98FB98);
+  }
+  2.5% {
+      background: linear-gradient(to bottom, #8FBC8F, #98FB98);
+  }
+  5% {
+      background: linear-gradient(to bottom, #8FBC8F, #98FB98);
+  }
+  7.5% {
+      background: linear-gradient(to bottom, #8FBC8F, #98FB98);
+  }
+  10% {
+      background: linear-gradient(to bottom, #8FBC8F, #98FB98);
+  }
+  12.5% {
+      background: linear-gradient(to bottom, #8FBC8F, #98FB98);
+  }
+  15% {
+      background: linear-gradient(to bottom, #8FBC8F, #98FB98);
+  }
+  17.5% {
+      background: linear-gradient(to bottom, #8FBC8F, #98FB98);
+  }
+  20% {
+      background: linear-gradient(to bottom, #8FBC8F, #98FB98);
+  }
+  22.5% {
+      background: linear-gradient(to bottom, #8FBC8F, #98FB98);
+  }
+  25% {
+      background: linear-gradient(to bottom, #8FBC8F, #98FB98);
+  }
+  27.5% {
+      background: linear-gradient(to bottom, #8FBC8F, #98FB98);
+  }
+  30% {
+      background: linear-gradient(to bottom, #8FBC8F, #98FB98);
+  }
+  32.5% {
+      background: linear-gradient(to bottom, #8FBC8F, #98FB98);
+  }
+  35% {
+      background: linear-gradient(to bottom, #8FBC8F, #98FB98);
+  }
+  37.5% {
+      background: linear-gradient(to bottom, #8FBC8F, #98FB98);
+  }
+  40% {
+      background: linear-gradient(to bottom, #8FBC8F, #98FB98);
+  }
+  42.5% {
+      background: linear-gradient(to bottom, #8FBC8F, #98FB98);
+  }
+  45% {
+      background: linear-gradient(to bottom, #8FBC8F, #98FB98);
+  }
+  47.5% {
+      background: linear-gradient(to bottom, #8FBC8F, #98FB98);
+  }
+  50% {
+      background: linear-gradient(to bottom, #8FBC8F, #98FB98);
+  }
+  52.5% {
+      background: linear-gradient(to bottom, #8FBC8F, #98FB98);
+  }
+  55% {
+      background: linear-gradient(to bottom, #8FBC8F, #98FB98);
+  }
+  57.5% {
+      background: linear-gradient(to bottom, #8FBC8F, #98FB98);
+  }
+  60% {
+      background: linear-gradient(to bottom, #8FBC8F, #98FB98);
+  }
+  62.5% {
+      background: linear-gradient(to bottom, #8FBC8F, #98FB98);
+  }
+  65% {
+      background: linear-gradient(to bottom, #8FBC8F, #98FB98);
+  }
+  67.5% {
+      background: linear-gradient(to bottom, #8FBC8F, #98FB98);
+  }
+  70% {
+      background: linear-gradient(to bottom, #8FBC8F, #98FB98);
+  }
+  72.5% {
+      background: linear-gradient(to bottom, #8FBC8F, #98FB98);
+  }
+  75% {
+      background: linear-gradient(to bottom, #8FBC8F, #98FB98);
+  }
+  77.5% {
+      background: linear-gradient(to bottom, #8FBC8F, #98FB98);
+  }
+  80% {
+      background: linear-gradient(to bottom, #8FBC8F, #98FB98);
+  }
+  82.5% {
+      background: linear-gradient(to bottom, #8FBC8F, #98FB98);
+  }
+  85% {
+      background: linear-gradient(to bottom, #8FBC8F, #98FB98);
+  }
+  87.5% {
+      background: linear-gradient(to bottom, #8FBC8F, #98FB98);
+  }
+  90% {
+      background: linear-gradient(to bottom, #8FBC8F, #98FB98);
+  }
+  92.5% {
+      background: linear-gradient(to bottom, #8FBC8F, #98FB98);
+  }
+  95% {
+      background: linear-gradient(to bottom, #8FBC8F, #98FB98);
+  }
+  97.5% {
+      background: linear-gradient(to bottom, #8FBC8F, #98FB98);
+  }
+  100% {
+      background: linear-gradient(to bottom, #8FBC8F, #98FB98);
+  }
 }
