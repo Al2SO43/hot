@@ -1,83 +1,73 @@
 @charset "utf-8";
 
-.hotlist-container {
-    display: inline-block;
-    width: calc(33.33% - 20px);
-    margin: 10px;
-    vertical-align: top;
-    box-sizing: border-box;
-    overflow-y: hidden; 
-    backdrop-filter: blur(10px); 
-    background-color: rgba(255, 255, 255, 0.5);
-    padding: 40px;
-    max-height: 350px;
-    transition: max-height 0.5s; 
-    border-radius: 20px;
-  }
-  
-  .hotlist-container:hover {
-    overflow-y: auto; 
-    max-height: 600px; 
-  }
-  
- 
-  @media (max-width: 800px) {
-    .hotlist-container {
-      width: calc(100% - 20px); 
-    }
-  }
-  body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-  }
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #919090, #393939);
+  background-size: cover;
+  background-position: center;
+}
 
-  #datetime {
-    text-align: center;  
-    padding: 10px;
-    font-size: 1.5rem;
+.hotlist-container {
+  display: inline-block;
+  width: calc(33.33% - 20px);
+  margin: 10px;
+  vertical-align: top;
+  box-sizing: border-box;
+  overflow-y: hidden;
+  background-color: #c4c4c4;
+  padding: 40px;
+  height: 350px;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+}
+.hotlist-container a {
+  text-decoration: none; 
+}
+.hotlist-container:hover {
+  overflow-y: auto;
+}
+
+@media (max-width: 800px) {
+  .hotlist-container {
+    width: calc(100% - 20px);
   }
+}
+
+#datetime {
+  text-align: center;
+  padding: 10px;
+  font-size: 1.2rem;
+  background-color: transparent;
+}
 
 .hotlist-container ul {
-    list-style: decimal; 
-    padding-left: 20px; 
-  }
+  list-style: decimal;
+  padding-left: 20px;
+}
 
+.bottomBar {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background-color: #7f7f7f; 
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 20px;
+}
 
-  .bottomBar {
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 50px;
-    background-color: rgba(2, 11, 12, 0.566);
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative; 
-    top: 20px; 
-  }
-  
-  .header-with-image {
-    display: flex;
-    align-items: center;
-  }
-  .header-image {
-    margin-right: 10px; 
-  }
 h2 {
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.5); 
-    backdrop-filter: blur(10px); 
-    -webkit-backdrop-filter: blur(10px); 
-    padding: 10px; 
-    font-size: 1.5rem;
-    border-radius: 20px; 
-  }
+  text-align: center;
+  background-color: transparent;
+  padding: 10px;
+  font-size: 1.5rem;
+  border-radius: 20px;
+}
 
-  
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;

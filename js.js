@@ -4,7 +4,7 @@ function fetchAndRenderData() {
       .then(data => {
         if (data.success) {
           const hotlist = document.getElementById('hotlist');
-          hotlist.innerHTML = '';  // 清空原有内容
+          hotlist.innerHTML = ''; 
   
           data.data.forEach(item => {
             const container = document.createElement('div');
@@ -29,35 +29,15 @@ function fetchAndRenderData() {
       });
   }
 
-  fetchAndRenderData();  // 确保页面首次加载时就获取并显示热搜数据
-  setInterval(fetchAndRenderData, 30 * 60 * 1000);  // 30分钟间隔
+  fetchAndRenderData();  
+  setInterval(fetchAndRenderData, 30 * 60 * 1000); 
   
-// 随机选择背景图片
-const images = [
-  './bg/bg1.jpg',
-  './bg/bg2.jpg',
-  './bg/bg3.jpg',
-  './bg/bg4.jpg',
-  './bg/bg5.jpg',
-  './bg/bg6.jpg',
-  './bg/bg7.jpg',
-  './bg/bg8.jpg',
-  './bg/bg9.jpg',
-  './bg/bg10.jpg',
-];
-const randomIndex = Math.floor(Math.random() * images.length);
-document.body.style.backgroundImage = `url(${images[randomIndex]})`;
-document.body.style.backgroundSize = 'cover';
-document.body.style.backgroundRepeat = 'no-repeat'; 
-document.body.style.backgroundPosition = 'center'; 
-document.body.style.backgroundAttachment = 'fixed'; 
   function displayTime() {
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false, timeZone: 'Asia/Shanghai' };
     const beijingTime = new Date().toLocaleString('zh-CN', options);
     document.getElementById('datetime').textContent = beijingTime;
   }
 
-  // 每秒更新时间
   setInterval(displayTime, 1000);
 
   displayTime();
