@@ -3,7 +3,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, #919090, #393939);
+  background: linear-gradient(to bottom, #afafaf, #6b6b6bb1);
   background-size: cover;
   background-position: center;
 }
@@ -15,7 +15,7 @@ body {
   vertical-align: top;
   box-sizing: border-box;
   overflow-y: hidden;
-  background-color: #c4c4c4;
+  background-color: #ffffff;
   padding: 40px;
   height: 350px;
   border: 1px solid #cccccc;
