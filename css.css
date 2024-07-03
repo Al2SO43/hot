@@ -1,51 +1,175 @@
 @charset "utf-8";
-
 body {
-  margin: 0;
-  padding: 0;
-  background-size: cover;
-  background-position: center;
-  background: linear-gradient(to right, #8FBC8F, #9ACD32);
-  animation: animateBackground 120s infinite; 
-}
-
-.hotlist-container {
-  background-color: rgba(255, 255, 255, 0.5);
-  padding: 40px;
-  backdrop-filter: blur(5px); 
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-  display: inline-block;
-  width: calc(33.33% - 20px);
-  margin: 10px;
-  vertical-align: top;
-  box-sizing: border-box;
-  overflow-y: hidden;
-  height: 500px;
-  border-radius: 10px;
-}
-.hotlist-container a {
-  text-decoration: none; 
-}
-.hotlist-container:hover {
-  overflow-y: auto;
-}
-
-@media (max-width: 800px) {
-  .hotlist-container {
-    width: calc(100% - 20px);
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* 将背景颜色改为亮白色 */
+    font-family: 'Arial', sans-serif;
   }
+  
+  #hotlist {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 每行显示三个项目 */
+    gap: 20px; /* 项目之间的间距 */
+    width: 95%; /* 确保宽度设置正确 */
+    margin: 20px auto;
+  }
+  .hot-list a {
+    text-decoration: none;
+    color: #4f4f4f;
+  }
+  
+  .hot-list {
+    border-radius: 12px;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border: 1px solid #ccc;
+    height: 500px;
+  }
+  
+  .title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .name {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .n-avatar {
+    width: 24px;
+    height: 24px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .subtitle {
+    font-size: 1em;
+    color: #666;
+  }
+  
+  .message {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  @media (max-width: 1200px) {
+    #hotlist {
+      grid-template-columns: repeat(2, 1fr); /* 小于770px的屏幕只显示1个 */
+    }
+  }
+  @media (max-width: 600px) {
+    #hotlist {
+      grid-template-columns: repeat(1, 1fr); /* 小于770px的屏幕只显示1个 */
+    }
+  }
+  
+
+.hot-list .title {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  height: 26px;
 }
 
-#datetime {
-  text-align: center;
-  padding: 10px;
-  font-size: 1.2rem;
+.hot-list .title .name {
+  display: flex;
+  align-items: center;
+}
+
+.hot-list .title .name .n-avatar {
   background-color: transparent;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
 }
 
-.hotlist-container ul {
-  list-style: decimal;
-  padding-left: 20px;
+.hot-list .title .subtitle {
+  margin-left: auto;
+  font-size: 0.75rem;
+}
+
+.hot-list .message {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  height: 24px;
+}
+
+.hot-list .message .time {
+  padding: 0px 6px;
+}
+
+.hot-list .lists {
+  overflow-y: auto; /* 添加滚动条 */
+  height: calc(100% - 50px); /* 调整列表高度 */
+}
+
+.hot-list .lists .item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+  padding-bottom: 2px;
+  min-height: 30px;
+  border-radius: 8px;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+
+.hot-list .lists .item .num {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  margin-right: 8px;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--n-border-color);
+  border-radius: 8px;
+  transition: all 0.3s ease 0s;
+}
+
+.hot-list .lists .item .num.one {
+  background-color: rgb(234, 68, 77);
+  color: rgb(255, 255, 255);
+}
+
+.hot-list .lists .item .num.two {
+  background-color: rgb(237, 112, 45);
+  color: rgb(255, 255, 255);
+}
+
+.hot-list .lists .item .num.three {
+  background-color: rgb(238, 173, 63);
+  color: rgb(255, 255, 255);
+}
+
+.hot-list .lists .item .text {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  transition: all 0.3s ease 0s;
+}
+
+.hot-list .lists .item .text::after {
+  content: "";
+  width: 0px;
+  height: 2px;
+  max-height: 2px;
+  background-color: var(--n-close-color-pressed);
+  position: absolute;
+  left: 0px;
+  bottom: -2px;
+  border-radius: 8px;
+  transition: all 0.3s ease 0s;
 }
 
 .bottomBar {
@@ -54,7 +178,6 @@ body {
   right: 0;
   height: 50px;
   background-color: rgba(2, 11, 12, 0.566); 
-  border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,143 +193,23 @@ h2 {
   border-radius: 20px;
 }
 
+#datetime {
+  text-align: center;
+  padding: 10px;
+  font-size: 1.2rem
+}
+
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-  background-color: #ffffff00;
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 4px;
-  background-color:#17cedbb6;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: #08462fcf;
-}
-@keyframes animateBackground {
-    0% {
-        background: linear-gradient(to bottom, #ADD8E6, #ADD8E6);
-    }
-    2.5% {
-        background: linear-gradient(to bottom, #ADD8E6, #AED9E0);
-    }
-    5% {
-        background: linear-gradient(to bottom, #AED9E0, #AFE0E6);
-    }
-    7.5% {
-        background: linear-gradient(to bottom, #AFE0E6, #B0E6EC);
-    }
-    10% {
-        background: linear-gradient(to bottom, #B0E6EC, #B1EDF2);
-    }
-    12.5% {
-        background: linear-gradient(to bottom, #B1EDF2, #B2F3F8);
-    }
-    15% {
-        background: linear-gradient(to bottom, #B2F3F8, #B3F9FE);
-    }
-    17.5% {
-        background: linear-gradient(to bottom, #B3F9FE, #B4FFFF);
-    }
-    20% {
-        background: linear-gradient(to bottom, #B4FFFF, #A4FFFF);
-    }
-    22.5% {
-        background: linear-gradient(to bottom, #A4FFFF, #94FFFF);
-    }
-    25% {
-        background: linear-gradient(to bottom, #94FFFF, #84FFFF);
-    }
-    27.5% {
-        background: linear-gradient(to bottom, #84FFFF, #74FFFF);
-    }
-    30% {
-        background: linear-gradient(to bottom, #74FFFF, #64FFFF);
-    }
-    32.5% {
-        background: linear-gradient(to bottom, #64FFFF, #54FFFF);
-    }
-    35% {
-        background: linear-gradient(to bottom, #54FFFF, #44FFFF);
-    }
-    37.5% {
-        background: linear-gradient(to bottom, #44FFFF, #34FFFF);
-    }
-    40% {
-        background: linear-gradient(to bottom, #34FFFF, #24FFFF);
-    }
-    42.5% {
-        background: linear-gradient(to bottom, #24FFFF, #14FFFF);
-    }
-    45% {
-        background: linear-gradient(to bottom, #14FFFF, #04FFFF);
-    }
-    47.5% {
-        background: linear-gradient(to bottom, #04FFFF, #00F7FF);
-    }
-    50% {
-        background: linear-gradient(to bottom, #00F7FF, #00EFFF);
-    }
-    52.5% {
-        background: linear-gradient(to bottom, #00EFFF, #00E7FF);
-    }
-    55% {
-        background: linear-gradient(to bottom, #00E7FF, #00DFFF);
-    }
-    57.5% {
-        background: linear-gradient(to bottom, #00DFFF, #00D7FF);
-    }
-    60% {
-        background: linear-gradient(to bottom, #00D7FF, #00CFFF);
-    }
-    62.5% {
-        background: linear-gradient(to bottom, #00CFFF, #00C7FF);
-    }
-    65% {
-        background: linear-gradient(to bottom, #00C7FF, #00BFFF);
-    }
-    67.5% {
-        background: linear-gradient(to bottom, #00BFFF, #00B7FF);
-    }
-    70% {
-        background: linear-gradient(to bottom, #00B7FF, #00AFFF);
-    }
-    72.5% {
-        background: linear-gradient(to bottom, #00AFFF, #00A7FF);
-    }
-    75% {
-        background: linear-gradient(to bottom, #00A7FF, #009FFF);
-    }
-    77.5% {
-        background: linear-gradient(to bottom, #009FFF, #0097FF);
-    }
-    80% {
-        background: linear-gradient(to bottom, #0097FF, #008FFF);
-    }
-    82.5% {
-        background: linear-gradient(to bottom, #008FFF, #0087FF);
-    }
-    85% {
-        background: linear-gradient(to bottom, #0087FF, #007FFF);
-    }
-    87.5% {
-        background: linear-gradient(to bottom, #007FFF, #0077FF);
-    }
-    90% {
-        background: linear-gradient(to bottom, #0077FF, #006FFF);
-    }
-    92.5% {
-        background: linear-gradient(to bottom, #006FFF, #0067FF);
-    }
-    95% {
-        background: linear-gradient(to bottom, #0067FF, #005FFF);
-    }
-    97.5% {
-        background: linear-gradient(to bottom, #005FFF, #0057FF);
-    }
-    100% {
-        background: linear-gradient(to bottom, #0057FF, #004FFF);
-    }
+    width: 6px;
+    height: 6px;
+    background-color: #ffffff00;
   }
   
+  ::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color:#8e8e8db6;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #434342cf;
+  }
