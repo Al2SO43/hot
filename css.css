@@ -2,15 +2,15 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #ffffff; /* 将背景颜色改为亮白色 */
+    background-color: #ffffff; 
     font-family: 'Arial', sans-serif;
   }
   
   #hotlist {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 每行显示三个项目 */
-    gap: 20px; /* 项目之间的间距 */
-    width: 95%; /* 确保宽度设置正确 */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    width: 95%; 
     margin: 20px auto;
   }
   .hot-list a {
@@ -40,14 +40,6 @@ body {
     margin-bottom: 10px;
   }
   
-  .n-avatar {
-    width: 24px;
-    height: 24px;
-    background-color: #ccc;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
-  
   .subtitle {
     font-size: 1em;
     color: #666;
@@ -61,12 +53,12 @@ body {
   
   @media (max-width: 1200px) {
     #hotlist {
-      grid-template-columns: repeat(2, 1fr); /* 小于770px的屏幕只显示1个 */
+      grid-template-columns: repeat(2, 1fr); 
     }
   }
   @media (max-width: 600px) {
     #hotlist {
-      grid-template-columns: repeat(1, 1fr); /* 小于770px的屏幕只显示1个 */
+      grid-template-columns: repeat(1, 1fr); 
     }
   }
   
@@ -108,8 +100,8 @@ body {
 }
 
 .hot-list .lists {
-  overflow-y: auto; /* 添加滚动条 */
-  height: calc(100% - 50px); /* 调整列表高度 */
+  overflow-y: auto; 
+  height: calc(100% - 50px);
 }
 
 .hot-list .lists .item {

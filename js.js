@@ -12,7 +12,6 @@ function fetchAndRenderData() {
           container.innerHTML = `
             <div class="title">
               <div class="name">
-                <span class="n-avatar"></span>
                 <span>${item.name}</span>
               </div>
               <div class="subtitle">${item.subtitle}</div>
