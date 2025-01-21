@@ -1,0 +1,207 @@
+@charset "utf-8";
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5; 
+    font-family: 'Arial', sans-serif;
+  }
+  
+  #hotlist {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    width: 95%; 
+    margin: 20px auto;
+  }
+  .hot-list a {
+    text-decoration: none;
+    color: #4f4f4f;
+  }
+  
+  .hot-list {
+    border-radius: 12px;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border: 1px solid #ccc;
+    height: 500px;
+  }
+  
+  .title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .name {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .subtitle {
+    font-size: 1em;
+    color: #666;
+  }
+  
+  .message {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  @media (max-width: 1200px) {
+    #hotlist {
+      grid-template-columns: repeat(2, 1fr); 
+    }
+  }
+  @media (max-width: 600px) {
+    #hotlist {
+      grid-template-columns: repeat(1, 1fr); 
+    }
+  }
+  
+
+.hot-list .title {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  height: 26px;
+}
+
+.hot-list .title .name {
+  display: flex;
+  align-items: center;
+}
+
+.hot-list .title .name .n-avatar {
+  background-color: transparent;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.hot-list .title .subtitle {
+  margin-left: auto;
+  font-size: 0.75rem;
+}
+
+.hot-list .message {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  height: 24px;
+}
+
+.hot-list .message .time {
+  padding: 0px 6px;
+}
+
+.hot-list .lists {
+  overflow-y: auto; 
+  height: calc(100% - 50px);
+}
+
+.hot-list .lists .item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+  padding-bottom: 2px;
+  min-height: 30px;
+  border-radius: 8px;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+
+.hot-list .lists .item .num {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  margin-right: 8px;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--n-border-color);
+  border-radius: 8px;
+  transition: all 0.3s ease 0s;
+}
+
+.hot-list .lists .item .num.one {
+  background-color: rgb(234, 68, 77);
+  color: rgb(255, 255, 255);
+}
+
+.hot-list .lists .item .num.two {
+  background-color: rgb(237, 112, 45);
+  color: rgb(255, 255, 255);
+}
+
+.hot-list .lists .item .num.three {
+  background-color: rgb(238, 173, 63);
+  color: rgb(255, 255, 255);
+}
+
+.hot-list .lists .item .text {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  transition: all 0.3s ease 0s;
+}
+
+.hot-list .lists .item .text::after {
+  content: "";
+  width: 0px;
+  height: 2px;
+  max-height: 2px;
+  background-color: var(--n-close-color-pressed);
+  position: absolute;
+  left: 0px;
+  bottom: -2px;
+  border-radius: 8px;
+  transition: all 0.3s ease 0s;
+}
+
+.bottomBar {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background-color: rgba(2, 11, 12, 0.566); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 20px;
+}
+
+h2 {
+  text-align: center;
+  background-color: transparent;
+  padding: 10px;
+  font-size: 1.5rem;
+  border-radius: 20px;
+}
+
+#datetime {
+  text-align: center;
+  padding: 10px;
+  font-size: 1.2rem
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: #ffffff00;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color:#8e8e8db6;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #434342cf;
+  }
