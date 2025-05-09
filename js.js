@@ -1,5 +1,5 @@
 function fetchAndRenderType1() {
-  fetch('https://api.cenguigui.cn/api/juhe/hotlist.php?type=zhihu')
+  fetch('https://api.cenguigui.cn/api/juhe/hotlist.php?type=history')
     .then(response => response.json())
     .then(data => {
       if (data.success) {
@@ -9,9 +9,9 @@ function fetchAndRenderType1() {
         container.innerHTML = `
           <div class="title">
             <div class="name">
-              <span>知乎热榜</span>
+              <span>历史上的今天</span>
             </div>
-            <div class="subtitle">热度</div>
+            <div class="subtitle">百度百科</div>
           </div>
           <div class="message">
             <div class="time">更新时间: ${new Date().toLocaleString('zh-CN', { hour12: false, timeZone: 'Asia/Shanghai' })}</div>
@@ -159,7 +159,7 @@ function fetchAndRenderType5() {
             <div class="name">
               <span>哔哩哔哩</span>
             </div>
-            <div class="subtitle">排行榜</div>
+            <div class="subtitle">热搜榜</div>
           </div>
           <div class="message">
             <div class="time">更新时间: ${new Date().toLocaleString('zh-CN', { hour12: false, timeZone: 'Asia/Shanghai' })}</div>
@@ -196,7 +196,7 @@ function fetchAndRenderType6() {
             <div class="name">
               <span>抖音</span>
             </div>
-            <div class="subtitle">热搜榜</div>
+            <div class="subtitle">热点榜</div>
           </div>
           <div class="message">
             <div class="time">更新时间: ${new Date().toLocaleString('zh-CN', { hour12: false, timeZone: 'Asia/Shanghai' })}</div>
