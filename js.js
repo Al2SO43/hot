@@ -455,19 +455,6 @@ fetchAndRenderType10();
 fetchAndRenderType11();
 fetchAndRenderType12();
 
-setInterval(fetchAndRenderType1, 10 * 60 * 1000);
-setInterval(fetchAndRenderType2, 10 * 60 * 1000);
-setInterval(fetchAndRenderType3, 10 * 60 * 1000);
-setInterval(fetchAndRenderType4, 10 * 60 * 1000);
-setInterval(fetchAndRenderType5, 10 * 60 * 1000);
-setInterval(fetchAndRenderType6, 10 * 60 * 1000);
-setInterval(fetchAndRenderType7, 10 * 60 * 1000);
-setInterval(fetchAndRenderType8, 10 * 60 * 1000);
-setInterval(fetchAndRenderType9, 10 * 60 * 1000);
-setInterval(fetchAndRenderType10, 10 * 60 * 1000);
-setInterval(fetchAndRenderType11, 10 * 60 * 1000);
-setInterval(fetchAndRenderType12, 10 * 60 * 1000);
-
 function displayTime() {
   const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false, timeZone: 'Asia/Shanghai' };
   const beijingTime = new Date().toLocaleString('zh-CN', options);
